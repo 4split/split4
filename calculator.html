@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حساب المبلغ الإجمالي</title>
     <style>
         body {
@@ -14,17 +14,14 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow-x: hidden; /* يمنع التمرير الأفقي */
         }
         .container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px; /* الحد الأقصى للعرض */
+            width: 400px;
             text-align: right;
-            box-sizing: border-box;
         }
         .contact-section {
             margin-top: 25px;
@@ -56,16 +53,13 @@
         }
         .input-group {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
-            gap: 10px;
+            gap: 5px;
             margin-bottom: 15px;
         }
         .input-group div {
             text-align: center;
-            width: 100%;
-            max-width: 23%;
-            box-sizing: border-box;
+            width: 23%;
         }
         .input-group div label {
             display: block;

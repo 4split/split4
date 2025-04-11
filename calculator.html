@@ -20,7 +20,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            width: 90%; /* جعل العرض 90% من عرض الشاشة */
+            max-width: 400px; /* تحديد الحد الأقصى للعرض */
             text-align: right;
         }
         .contact-section {
@@ -54,7 +55,7 @@
         }
         .input-group {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr); /* تقسيم الأعمدة لأربع */
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -82,7 +83,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            width: 48%;
+            width: 48%; /* الأزرار ستأخذ 48% من العرض */
             margin-top: 10px;
         }
         button#calculate {
@@ -92,6 +93,20 @@
         button#clear {
             background-color: #f44336;
             color: white;
+        }
+
+        /* استعلامات الوسائط لتصميم متجاوب */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+            .input-group {
+                grid-template-columns: 1fr 1fr; /* تقسيم الحقول إلى عمودين على الشاشات الصغيرة */
+            }
+            button {
+                width: 100%; /* الأزرار ستأخذ العرض الكامل على الشاشات الصغيرة */
+                margin-top: 10px;
+            }
         }
     </style>
 </head>

@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حساب المبلغ الإجمالي</title>
     <style>
-        /* منع التمرير الأفقي */
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
             overflow-x: hidden;
         }
 
-        /* الحاوية */
         .container {
             background-color: #fff;
             padding: 20px;
@@ -25,40 +27,11 @@
             text-align: right;
         }
 
-        .contact-section {
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .contact-section p {
-            margin-bottom: 10px;
-            font-size: 15px;
-            color: #333;
-        }
-
-        /* زر الواتساب */
-        .whatsapp-button {
-            background-color: #25D366;
-            color: white;
-            padding: 10px 18px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-        }
-        .whatsapp-button:hover {
-            background-color: #1ebe5d;
-        }
-
         label {
             display: block;
             margin-bottom: 5px;
         }
 
-        /* الحقول */
         .input-group {
             display: flex;
             justify-content: space-between;
@@ -68,7 +41,7 @@
 
         .input-group div {
             text-align: center;
-            width: 23%; /* ضبط العرض ليتناسب مع سطر واحد */
+            width: 23%; /* العرض المناسب للحقول */
             box-sizing: border-box;
         }
 
@@ -81,12 +54,12 @@
         input[type="text"],
         input[type="number"] {
             width: 100%;
-            padding: 6px;  /* تقليص الحشوة */
+            padding: 8px;  /* حشوة مناسبة */
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
-            font-size: 14px; /* تقليص حجم الخط */
-            margin-bottom: 10px; /* تقليص المسافة بين الحقول */
+            font-size: 14px;
+            margin-bottom: 10px; /* المسافة بين الحقول */
         }
 
         input[readonly] {
@@ -111,24 +84,50 @@
             color: white;
         }
 
-        /* استجابة التصميم على الجوال */
+        .contact-section {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .contact-section p {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebe5d;
+        }
+
         @media (max-width: 600px) {
-            .input-group div {
-                width: 23%; /* ضبط العرض ليشمل الحقول بشكل مناسب للجوال */
+            .container {
+                padding: 15px;
             }
 
-            .container {
-                padding: 15px; /* تقليل الحشوة لتناسب الشاشة الصغيرة */
+            .input-group div {
+                width: 23%;
             }
 
             .whatsapp-button {
-                width: 100%; /* توسيع زر الواتساب ليملأ الشاشة */
+                width: 100%;
                 font-size: 18px;
                 padding: 15px 0;
             }
 
             button {
-                width: 100%; /* جعل الأزرار تملأ العرض */
+                width: 100%;
                 font-size: 16px;
                 padding: 12px 0;
             }

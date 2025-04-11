@@ -76,6 +76,15 @@
         input[readonly] {
             background-color: #e9e9e9;
         }
+        /* إخفاء الأسهم في حقل المبلغ */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
         button {
             padding: 8px 12px;
             border: none;

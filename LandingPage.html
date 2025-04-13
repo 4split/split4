@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>تقسيط فواتيرك عن طريق تابي وتمارا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Cairo', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       margin: 0;
@@ -53,6 +55,13 @@
       border-radius: 8px;
       margin: 20px auto;
       max-width: 300px;
+      cursor: not-allowed; /* لا يمكن النقر عليه بشكل افتراضي */
+      pointer-events: none; /* منع النقر بشكل كامل */
+    }
+
+    .whatsapp-btn.active {
+      cursor: pointer; /* يمكن النقر عليه عندما يكون مفعل */
+      pointer-events: auto; /* تمكين النقر عندما يكون مفعل */
     }
 
     .legal {
@@ -124,12 +133,15 @@
 </head>
 <body>
   <div class="container">
+    <!-- قسم العنوان (header) -->
     <h1>قسط فواتيرك عن طريق تابي أو تمارا</h1>
 
+    <!-- قسم الوصف العام -->
     <div class="card">
       <p>خدمة تساعدك على تقسيط فواتيرك عبر تابي أو تمارا على ٤ دفعات، تشمل الفواتير الحكومية، فواتير الكهرباء، المياه، الاتصالات، التذاكر، رسوم الأعمال، وغيرها.</p>
     </div>
 
+    <!-- قسم الخدمات المدعومة -->
     <div class="card">
       <h2>الخدمات المدعومة</h2>
       <ul>
@@ -140,6 +152,7 @@
       </ul>
     </div>
 
+    <!-- قسم خطوات الحصول على الخدمة -->
     <div class="card">
       <h2>خطوات الحصول على الخدمة</h2>
       <ul>
@@ -150,11 +163,7 @@
       </ul>
     </div>
 
-    <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">تواصل عبر واتساب</a>
-    <a href="#terms" class="whatsapp-btn" style="background-color:#00796b;">الاطلاع على الشروط والأحكام</a>
-
-    <div class="legal">🚨 تنويه: الخدمة غير قابلة للإلغاء أو الاسترداد بعد إصدار رابط الدفع.</div>
-
+    <!-- قسم الشروط والأحكام -->
     <div class="card accordion" id="terms">
       <h2>📄 الشروط والأحكام</h2>
 
@@ -222,14 +231,29 @@
         </div>
       </div>
 
-      <div class="accordion-item">
-        <input type="radio" name="accordion" id="item-8">
-        <label for="item-8" class="accordion-title">8. 📞 للاستفسارات</label>
-        <div class="accordion-content">
-          لأي سؤال أو استفسار، يمكنك التواصل معنا عبر واتساب: <strong>966570004656+</strong>
-        </div>
+
+   <!-- مربع الموافقة على الشروط --> 
+    <div class="card accordion" id="terms">
+ 
+
+     <!-- مربع الموافقة على الشروط -->
+<div style="text-align: center; margin-top: 20px;">
+  <input type="checkbox" id="agree" onchange="toggleWhatsAppButton()">
+  <label for="agree">أوافق على الشروط والأحكام</label>
+</div>
+
+<!-- زر واتساب -->
+<a id="whatsappButton" class="whatsapp-btn" href="https://wa.me/966500000000" target="_blank">اطلب الخدمة عبر واتساب</a>
+
+<script>
+  function toggleWhatsAppButton() {
+    const checkbox = document.getElementById('agree');
+    const button = document.getElementById('whatsappButton');
+    if (checkbox.checked) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  }
+</script>
       </div>
-    </div>
-  </div>
-</body>
-</html>

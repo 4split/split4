@@ -4,51 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>تقسيط فواتيرك عن طريق تابي وتمارا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom, #f9f9f9, #e3f2fd);
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
+      max-width: 960px;
+      margin: 40px auto;
       padding: 20px;
     }
 
     h1, h2 {
-      color: #00695c;
       text-align: center;
+      color: #00695c;
     }
 
     p, li {
       font-size: 1.1em;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     ul {
-      padding-right: 20px;
+      padding-right: 25px;
     }
 
     .section {
-      margin: 40px 0;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      margin: 30px 0;
     }
 
     .whatsapp-btn {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
       background-color: #25D366;
       color: white;
-      text-align: center;
       padding: 15px;
       font-size: 1.2em;
       font-weight: bold;
+      border: none;
+      border-radius: 12px;
       text-decoration: none;
-      border-radius: 8px;
-      margin: 20px auto;
-      max-width: 300px;
+      width: fit-content;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    .whatsapp-btn i {
+      font-size: 1.5em;
     }
 
     .legal {
@@ -58,7 +77,17 @@
       margin-top: 40px;
     }
 
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 60px 0;
+    }
+
     @media (max-width: 600px) {
+      .section {
+        padding: 15px;
+      }
+
       h1, h2 {
         font-size: 1.4em;
       }
@@ -72,68 +101,74 @@
 <body>
 
   <div class="container">
-    <!-- Arabic Content -->
-    <h1>قسط فواتيرك الحكومية والخاصة حتى لو الجهة ما تدعم تابي أو تمارا!</h1>
+
+    <!-- Arabic Section -->
+    <h1>قسط فواتيرك حتى لو الجهة ما تدعم تابي أو تمارا!</h1>
 
     <div class="section">
-      <p>خدمة تساعدك على تقسيط فواتيرك عبر تابي أو تمارا على ٤ دفعات، تشمل الفواتير الحكومية، فواتير الكهرباء، المياه، الاتصالات، التذاكر، رسوم الأعمال، وغيرها.</p>
+      <p>نقدم لك خدمة تقسيط فواتيرك عبر <strong>تابي</strong> أو <strong>تمارا</strong> على ٤ دفعات. تشمل الفواتير الحكومية، الكهرباء، المياه، الاتصالات، التذاكر، رسوم الأعمال، والمزيد.</p>
     </div>
 
     <div class="section">
       <h2>الخدمات المدعومة:</h2>
       <ul>
-        <li><strong>الخدمات الحكومية:</strong> أبشر، الجوازات، المرور، المقابل المالي</li>
-        <li><strong>خدمات الأفراد:</strong> الكهرباء، المياه، الاتصالات، التذاكر، الاشتراكات</li>
-        <li><strong>خدمات الأعمال:</strong> رسوم البلدية، الاشتراكات، الرخص التجارية</li>
-        <li><strong>البنوك والتمويل:</strong> سداد بطاقات، سداد التمويل، رسوم بنكية</li>
+        <li><strong>الحكومية:</strong> أبشر، الجوازات، المرور، المقابل المالي</li>
+        <li><strong>الأفراد:</strong> الكهرباء، المياه، الاتصالات، التذاكر</li>
+        <li><strong>الأعمال:</strong> البلدية، الرخص، الاشتراكات التجارية</li>
+        <li><strong>البنوك:</strong> سداد بطاقات، رسوم تمويل، رسوم بنكية</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>خطوات الحصول على الخدمة:</h2>
+      <h2>خطوات الخدمة:</h2>
       <ul>
-        <li>تواصل معنا عبر واتساب</li>
-        <li>زودنا برقم الفاتورة والمبلغ</li>
+        <li>تواصل معنا على الواتساب</li>
+        <li>أرسل رقم الفاتورة والمبلغ</li>
         <li>يصلك رابط الدفع عبر تابي أو تمارا</li>
-        <li>بعد الدفع ننجز الخدمة ونرسل لك الإيصال خلال ساعة</li>
+        <li>بعد الدفع ننفذ الخدمة ونرسل الإيصال خلال ساعة</li>
       </ul>
     </div>
 
-    <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">تواصل عبر واتساب</a>
+    <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">
+      <i class="bi bi-whatsapp"></i> تواصل عبر واتساب
+    </a>
 
-    <div class="legal">الخدمة غير قابلة للإلغاء أو الاسترداد بعد شراء رابط الدفع.</div>
+    <div class="legal">الخدمة غير قابلة للإلغاء أو الاسترداد بعد إصدار رابط الدفع.</div>
 
     <!-- English Section -->
-    <hr style="margin: 60px 0;">
-    <h1 dir="ltr" style="text-align: center;">Installment Your Bills via Tabby or Tamara – Even if the Provider Doesn’t Support Them!</h1>
+    <hr>
+    <h1 dir="ltr">Install Your Bills via Tabby or Tamara!</h1>
 
     <div class="section" dir="ltr">
-      <p>This service helps you split your bills into 4 payments via Tabby or Tamara – including government fees, utilities, telecom bills, tickets, business charges, and more.</p>
+      <p>This service lets you split your bills into 4 payments through <strong>Tabby</strong> or <strong>Tamara</strong> – covering government, utility, telecom, and business fees.</p>
     </div>
 
     <div class="section" dir="ltr">
       <h2>Supported Services:</h2>
       <ul>
-        <li><strong>Government Services:</strong> Absher, passports, traffic, expat fees</li>
-        <li><strong>Personal Services:</strong> electricity, water, telecom, tickets, subscriptions</li>
-        <li><strong>Business Services:</strong> municipal fees, licenses, business subscriptions</li>
-        <li><strong>Banking & Finance:</strong> credit card payments, loans, bank fees</li>
+        <li><strong>Government:</strong> Absher, passports, traffic, expat fees</li>
+        <li><strong>Personal:</strong> electricity, water, telecom, tickets</li>
+        <li><strong>Business:</strong> municipal fees, licenses, subscriptions</li>
+        <li><strong>Banking:</strong> card payments, loans, bank fees</li>
       </ul>
     </div>
 
     <div class="section" dir="ltr">
-      <h2>How to Get the Service:</h2>
+      <h2>Steps:</h2>
       <ul>
-        <li>Contact us via WhatsApp</li>
-        <li>Send us the bill number and amount</li>
-        <li>You’ll receive a payment link via Tabby or Tamara</li>
-        <li>Once paid, we complete the service and send you the receipt within an hour</li>
+        <li>Contact us on WhatsApp</li>
+        <li>Send bill number and amount</li>
+        <li>You’ll get a Tabby/Tamara link</li>
+        <li>After payment, we complete the service and send the receipt within an hour</li>
       </ul>
     </div>
 
-    <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">Contact via WhatsApp</a>
+    <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">
+      <i class="bi bi-whatsapp"></i> Contact via WhatsApp
+    </a>
 
-    <div class="legal" dir="ltr">This service is non-refundable once the payment link is issued.</div>
+    <div class="legal" dir="ltr">Service is non-refundable after the link is issued.</div>
+
   </div>
 
 </body>

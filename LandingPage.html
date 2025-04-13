@@ -7,14 +7,14 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f4f4f4;
       color: #333;
       margin: 0;
       padding: 0;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 20px;
     }
@@ -24,17 +24,21 @@
       text-align: center;
     }
 
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px 0;
     }
 
     ul {
       padding-right: 20px;
     }
 
-    .section {
-      margin: 40px 0;
+    li {
+      line-height: 1.8;
+      font-size: 1.1em;
     }
 
     .whatsapp-btn {
@@ -52,23 +56,19 @@
     }
 
     .legal {
-      font-size: 1em;
-      font-weight: bold;
-      color: #c62828;
-      background-color: #fdecea;
-      padding: 15px;
-      border-radius: 8px;
+      font-size: 1.1em;
+      color: #b71c1c;
       text-align: center;
+      font-weight: bold;
+      background-color: #fff3cd;
+      border: 1px solid #ffecb5;
+      padding: 15px;
       margin-top: 40px;
+      border-radius: 8px;
     }
 
-    /* Accordion Styles */
     .accordion {
-      direction: rtl;
-      max-width: 900px;
-      margin: 20px auto;
-      border-radius: 10px;
-      overflow: hidden;
+      margin-top: 30px;
     }
 
     .accordion-item {
@@ -77,33 +77,37 @@
 
     .accordion-title {
       display: block;
-      background-color: #e0f2f1;
-      color: #004d40;
-      padding: 15px 20px;
-      font-size: 1.1em;
-      font-weight: bold;
+      padding: 15px;
+      background-color: #eeeeee;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: bold;
+      position: relative;
+      border-radius: 8px 8px 0 0;
     }
 
-    .accordion-title:hover {
-      background-color: #b2dfdb;
+    .accordion-title::after {
+      content: '+';
+      position: absolute;
+      left: 15px;
+      font-size: 1.2em;
+    }
+
+    input[type="radio"] {
+      display: none;
     }
 
     .accordion-content {
       display: none;
-      padding: 15px 25px;
-      background-color: #f9f9f9;
-      color: #333;
-      font-size: 1em;
-      line-height: 1.8;
+      padding: 15px;
+      background-color: #fafafa;
+      border-radius: 0 0 8px 8px;
     }
 
-    .accordion-item input[type="radio"] {
-      display: none;
+    input[type="radio"]:checked + .accordion-title::after {
+      content: '-';
     }
 
-    .accordion-item input[type="radio"]:checked + .accordion-title + .accordion-content {
+    input[type="radio"]:checked + .accordion-title + .accordion-content {
       display: block;
     }
 
@@ -112,23 +116,22 @@
         font-size: 1.4em;
       }
 
-      p, li {
+      li {
         font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>قسط فواتيرك الحكومية والخاصة حتى لو الجهة ما تدعم تابي أو تمارا!</h1>
+    <h1>قسط فواتيرك عن طريق تابي أو تمارا</h1>
 
-    <div class="section">
+    <div class="card">
       <p>خدمة تساعدك على تقسيط فواتيرك عبر تابي أو تمارا على ٤ دفعات، تشمل الفواتير الحكومية، فواتير الكهرباء، المياه، الاتصالات، التذاكر، رسوم الأعمال، وغيرها.</p>
     </div>
 
-    <div class="section">
-      <h2>الخدمات المدعومة:</h2>
+    <div class="card">
+      <h2>الخدمات المدعومة</h2>
       <ul>
         <li><strong>الخدمات الحكومية:</strong> أبشر، الجوازات، المرور، المقابل المالي</li>
         <li><strong>خدمات الأفراد:</strong> الكهرباء، المياه، الاتصالات، التذاكر، الاشتراكات</li>
@@ -137,8 +140,8 @@
       </ul>
     </div>
 
-    <div class="section">
-      <h2>خطوات الحصول على الخدمة:</h2>
+    <div class="card">
+      <h2>خطوات الحصول على الخدمة</h2>
       <ul>
         <li>تواصل معنا عبر واتساب</li>
         <li>زودنا برقم الفاتورة والمبلغ</li>
@@ -148,97 +151,85 @@
     </div>
 
     <a class="whatsapp-btn" href="https://wa.me/966570004656" target="_blank">تواصل عبر واتساب</a>
+    <a href="#terms" class="whatsapp-btn" style="background-color:#00796b;">الاطلاع على الشروط والأحكام</a>
 
-    <div class="legal">🚫 الخدمة غير قابلة للإلغاء أو الاسترداد بعد إصدار رابط الدفع.</div>
+    <div class="legal">🚨 تنويه: الخدمة غير قابلة للإلغاء أو الاسترداد بعد إصدار رابط الدفع.</div>
 
-    <!-- الشروط والأحكام -->
-    <div class="section">
-      <h2 style="text-align: center; color: #00695c;">الشروط والأحكام</h2>
+    <div class="card accordion" id="terms">
+      <h2>📄 الشروط والأحكام</h2>
 
-      <div class="accordion">
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-1" checked>
-          <label for="item-1" class="accordion-title">1. طبيعة الخدمة</label>
-          <div class="accordion-content">
-            <p>نحن جهة وسيطة تقدم خدمة تسهيل تقسيط الفواتير غير المدعومة من “تابي” أو “تمارا” من خلال دفع الفاتورة بالنيابة عن العميل مقابل عمولة ورسوم تقسيط.</p>
-            <p>لسنا جهة تمويل أو جهة رسمية تابعة لـ “تابي” أو “تمارا” أو أي جهة حكومية، بل نقدم الخدمة كوسيط تقني ومساعد.</p>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-1" checked>
+        <label for="item-1" class="accordion-title">1. 🛠️ طبيعة الخدمة</label>
+        <div class="accordion-content">
+          نحن جهة وسيطة نقدم خدمة تسهيل تقسيط الفواتير غير المدعومة من “تابي” أو “تمارا” من خلال دفع الفاتورة بالنيابة عن العميل مقابل عمولة ورسوم تقسيط.<br>
+          لسنا جهة تمويل أو جهة رسمية تابعة لـ “تابي” أو “تمارا” أو أي جهة حكومية، بل نقدم الخدمة كوسيط تقني ومساعد.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-2">
-          <label for="item-2" class="accordion-title">2. آلية العمل</label>
-          <div class="accordion-content">
-            <ol>
-              <li>يقوم العميل بإرسال رقم الفاتورة أو السداد ومبلغها عبر قنوات التواصل (مثل واتساب).</li>
-              <li>يتم التأكد من صحة البيانات وتحديد الرسوم.</li>
-              <li>يتم إرسال رابط دفع من خلال تابي أو تمارا متضمّنًا إجمالي المبلغ.</li>
-              <li>بعد الدفع وسداد أول دفعة، يتم إنجاز السداد خلال مدة أقصاها ساعة عمل.</li>
-              <li>يتم إرسال إيصال السداد إلى العميل.</li>
-            </ol>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-2">
+        <label for="item-2" class="accordion-title">2. 🔄 آلية العمل</label>
+        <div class="accordion-content">
+          1. يقوم العميل بإرسال رقم الفاتورة أو السداد ومبلغها عبر قنوات التواصل.<br>
+          2. يتم التأكد من صحة البيانات وتحديد الرسوم.<br>
+          3. يتم إرسال رابط دفع من خلال تابي أو تمارا متضمّنًا إجمالي المبلغ.<br>
+          4. بعد إتمام الدفع وسداد أول دفعة، يتم إنجاز السداد خلال مدة أقصاها ساعة عمل واحدة.<br>
+          5. يتم إرسال إيصال السداد إلى العميل.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-3">
-          <label for="item-3" class="accordion-title">3. الرسوم</label>
-          <div class="accordion-content">
-            <ul>
-              <li>يتم احتساب رسوم الخدمة وفقًا لقيمة الفاتورة.</li>
-              <li>يُعتبر سداد أول دفعة قبولًا نهائيًا للرسوم.</li>
-            </ul>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-3">
+        <label for="item-3" class="accordion-title">3. 💰 الرسوم</label>
+        <div class="accordion-content">
+          • يتم احتساب رسوم الخدمة وفقًا لقيمة الفاتورة.<br>
+          • يوافق العميل على الرسوم قبل البدء، ويُعتبر سداد أول دفعة قبولاً نهائيًا.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-4">
-          <label for="item-4" class="accordion-title">4. سياسة الإلغاء والاسترجاع</label>
-          <div class="accordion-content">
-            <ul>
-              <li>بعد تنفيذ العملية، لا يمكن إلغاؤها أو استرداد المبلغ بأي حال.</li>
-              <li>يتحمل العميل مسؤولية دقة بيانات السداد المُقدمة.</li>
-            </ul>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-4">
+        <label for="item-4" class="accordion-title">4. 🚫 سياسة الإلغاء والاسترجاع</label>
+        <div class="accordion-content">
+          • بعد تنفيذ العملية، لا يمكن إلغاؤها أو استرداد المبلغ بأي حال.<br>
+          • يتحمل العميل مسؤولية دقة بيانات السداد المُقدمة.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-5">
-          <label for="item-5" class="accordion-title">5. حدود المسؤولية</label>
-          <div class="accordion-content">
-            <ul>
-              <li>غير مسؤولين عن أي تأخير ناتج عن معلومات غير صحيحة من العميل.</li>
-              <li>لا نتحمل مسؤولية في حال رفض تابي أو تمارا تنفيذ العملية.</li>
-            </ul>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-5">
+        <label for="item-5" class="accordion-title">5. ⚠️ حدود المسؤولية</label>
+        <div class="accordion-content">
+          • نحن غير مسؤولين عن أي تأخير أو خطأ ناتج عن معلومات غير صحيحة من العميل.<br>
+          • لا نتحمل مسؤولية في حال قيام “تابي” أو “تمارا” برفض العملية لأي سبب.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-6">
-          <label for="item-6" class="accordion-title">6. حماية البيانات</label>
-          <div class="accordion-content">
-            <p>نلتزم بالحفاظ على خصوصية معلومات العميل وعدم مشاركتها مع أي طرف غير مصرح له.</p>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-6">
+        <label for="item-6" class="accordion-title">6. 🔒 حماية البيانات</label>
+        <div class="accordion-content">
+          نلتزم بالحفاظ على خصوصية معلومات العميل وعدم مشاركتها مع أي طرف غير مصرح له.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-7">
-          <label for="item-7" class="accordion-title">7. التعديل على الشروط</label>
-          <div class="accordion-content">
-            <p>يحق لنا تعديل هذه الشروط في أي وقت، وسيتم إخطار العملاء بالتعديلات من خلال قنواتنا الرسمية.</p>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-7">
+        <label for="item-7" class="accordion-title">7. 📝 التعديل على الشروط</label>
+        <div class="accordion-content">
+          يحق لنا تعديل هذه الشروط في أي وقت، وسيتم إخطار العملاء بالتعديلات من خلال قنواتنا الرسمية.
         </div>
+      </div>
 
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="item-8">
-          <label for="item-8" class="accordion-title">للاستفسارات</label>
-          <div class="accordion-content">
-            <p>لأي سؤال أو استفسار، يمكنك التواصل معنا عبر واتساب: <strong>966570004656+</strong></p>
-          </div>
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item-8">
+        <label for="item-8" class="accordion-title">8. 📞 للاستفسارات</label>
+        <div class="accordion-content">
+          لأي سؤال أو استفسار، يمكنك التواصل معنا عبر واتساب: <strong>966570004656+</strong>
         </div>
       </div>
     </div>
-
   </div>
-
 </body>
 </html>
